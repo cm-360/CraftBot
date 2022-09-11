@@ -1,0 +1,54 @@
+{
+  "admin": {
+    "roles": [
+      562678620007694342,
+      562678556681961473
+    ],
+    "users": [
+      345195280506814465
+    ]
+  },
+  "prefix": "c!",
+  "modules": {
+    "chat": {
+      "channel_id": 919369150252613652
+    },
+    "stats": {
+      "channel_id": 919760741731549184,
+      "message_id": 920528090466242560
+    },
+    "help": {
+      "channel_id": 786111244582780969,
+      "formats": {
+        "message_greeting": "Hey {0.author.mention}, a staff member should be here to help you shortly!",
+        "thread_title": "Support thread for {0.author.name}"
+      }
+    },
+    "suggestions": {
+      "channel_id": 562668611626598411,
+      "formats": {
+        "message_greeting": "Thanks for the suggestion {0.author.mention}! This thread is for all chat regarding your idea, allowing other users to vote on it and collaborate with you.",
+        "thread_title": "Suggestion - {0.clean_content}",
+        "reaction_downvote": "👎",
+        "reaction_upvote": "👍"
+      }
+    },
+    "whitelist": {
+      "channel_id": 934160161810030602,
+      "formats": {
+        "message_greeting": "Hey {0.author.mention}, just one more step before we can get you whitelisted! Please react to indicate whether this username is for a Java Editon (<:java:936120713570570301>) or Bedrock Editon (<:bedrock:936120874954805270>) account.",
+        "message_finished": "All set! You should be able to join the server now.",
+        "error_invalid": "Sorry {0.author.mention}, but that doesn't quite look like a valid Minecraft username. Usernames can be 3-16 characters long, and can only contain alphanumeric characters (A-Z, a-z, 0-9) and underscores (_).",
+        "error_registered": "Sorry {0.author.mention}, but it seems that you already have a Minecraft account registered here! Please contact a staff member for further assistance.",
+        "reaction_bedrock": "<:bedrock:936120874954805270>",
+        "reaction_java": "<:java:936120713570570301>"
+      }
+    }
+  },
+  "udp": {
+    "listen_address": "localhost",
+    "listen_port": 9989,
+    "sendto_address": "localhost",
+    "sendto_port": 9899
+  }
+}
