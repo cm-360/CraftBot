@@ -16,12 +16,12 @@ class ThreadCog(commands.Cog):
     def __init__(self, bot: craftbot.CraftBot):
         self.bot = bot
 
-    """
-    group_thread = discord.SlashCommandGroup(name="thread", description="Commands for managing threads.", guild_ids=env_guild_ids)
-    async def thread(self, ctx: discord.ApplicationContext):
-        if ctx.invoked_subcommand is None:
-            await ctx.interaction.response.send_message(content="Subcommands: rename, archive")
-    """
+    
+    # group_thread = discord.SlashCommandGroup(name="thread", description="Commands for managing threads.", guild_ids=env_guild_ids)
+    # async def thread(self, ctx: discord.ApplicationContext):
+    #     if ctx.invoked_subcommand is None:
+    #         await ctx.interaction.response.send_message(content="Subcommands: rename, archive")
+
 
     @slash_command(description="Rename the current thread.", guild_ids=env_guild_ids)
     @commands.check(craftbot.CraftBot.is_admin)
