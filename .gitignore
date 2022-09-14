@@ -3,6 +3,8 @@ data.db
 # Personal dev environment
 python-3.10.2-amd64/
 run.bat
+.project
+.pydevproject
 
 
 # Byte-compiled / optimized / DLL files
