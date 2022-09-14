@@ -15,15 +15,10 @@ class ThreadCog(commands.Cog):
 
     def __init__(self, bot: craftbot.CraftBot):
         self.bot = bot
-
     
-    # group_thread = discord.SlashCommandGroup(name="thread", description="Commands for managing threads.", guild_ids=env_guild_ids)
-    # async def thread(self, ctx: discord.ApplicationContext):
-    #     if ctx.invoked_subcommand is None:
-    #         await ctx.interaction.response.send_message(content="Subcommands: rename, archive")
+    group_thread = discord.SlashCommandGroup(name="thread", description="Commands for managing threads.", guild_ids=env_guild_ids)
 
-
-    @slash_command(description="Rename the current thread.", guild_ids=env_guild_ids)
+    @group_thread.command(description="Rename the current thread.", guild_ids=env_guild_ids)
     @commands.check(craftbot.CraftBot.is_admin)
     async def rename(self, ctx: discord.ApplicationContext, name: Option(str, "The new name for this thread.", required=True)):
         if type(ctx.channel) is discord.Thread:
@@ -32,7 +27,7 @@ class ThreadCog(commands.Cog):
         else:
             await ctx.interaction.response.send_message(content="Sorry, this command can only be used inside of a thread!")
 
-    @slash_command(description="Archive the current thread.", guild_ids=env_guild_ids)
+    @group_thread.command(description="Archive the current thread.", guild_ids=env_guild_ids)
     @commands.check(craftbot.CraftBot.is_admin)
     async def archive(self, ctx: discord.ApplicationContext):
         if type(ctx.channel) is discord.Thread:
