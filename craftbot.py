@@ -4,8 +4,8 @@
 import discord
 from discord.ext import commands
 from discord.commands import slash_command, Option
-# Asynchronous Minecraft RCON library
-from async_mcrcon import MinecraftClient, InvalidPassword
+# Asynchronous Minecraft RCON library (https://github.com/MrReacher/async-mcrcon)
+# from async_mcrcon import MinecraftClient, InvalidPassword
 # SQLite database library
 import sqlite3
 # Library to load variables from the .env file
